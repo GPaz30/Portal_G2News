@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:wght@300;400;600;700;900&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Configurações gerais do corpo e HTML */
+html, body {
+    height: 100%;
+    font-family: "Noticia Text", sans-serif;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Cabeçalho-Inicio */
+.header {
+    background-color: #7d0000;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .logo {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Noticia Text", sans-serif;
+    margin-bottom: 10px;
+}
+
+.header .menu {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+/* Cabeçalho-Fim */
+
+
+/* Menu de navegação-Inicio */
+.menu li:hover {
+    color: #ddd;
+    transform: translateY(-5px);
+}
+
+.header .menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+.header .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Menu de navegação-Fim */
+
+
+/* Conteúdo principal */
+.content {
+    display: flex;
+    flex: 1;
+}
+
+
+/* Área principal */
+.main-content {
+    padding: 20px;
+    background-color: #f1f1f1;
+    flex: 3;
+}
+
+/* Destaque da notícia principal-Inicio */
+.highlight-main {
+    display: flex;
+    background-color: #fff;
+    padding: 0px;
+    border: 1px solid #ddd;
+    width: 90%;
+    height: 27%;
+    margin: 40px auto;
+    margin-bottom: 45px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.highlight-main img {
+    width: 45%;
+    height: auto;
+    object-fit: cover;
+}
+
+.highlight-main img:hover {
+    transform: scale(1.03);
+}
+
+.highlight-main .text-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.highlight-main h3:hover {
+    color: #a30902;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.highlight-main h3 {
+    margin-top: 7%;
+    color: #7d0000;
+    font-size: 1.8em;
+}
+/* Destaque da notícia principal-Fim */
+
+
+/* Destaque de notícias secundárias (2 e 3)-Inicio */
+.highlight-row {
+    display: flex;
+    gap: 4px;
+    margin-top: 20px;
+}
+
+.highlight-row h3 {
+    color: #ffffff;
+}
+
+.highlight-small {
+    position: relative;
+    flex: 1;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 45%;
+    margin: 0 auto;
+    margin-bottom: 45px;
+    max-width: 300px;
+    min-height: 200px;
+    border-radius: 10px;
+}
+
+.highlight-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.highlight-small img:hover {
+    transform: scale(1.1);
+}
+
+.highlight-small .text-content {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.highlight-small h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #dbdada;
+}
+/* Destaque de notícias secundárias (2 e 3)-Fim */
+
+
+/* Destaque de notícias secundárias (4, 5 e 6)-Inicio */
+.highlight {
+    display: flex;
+    padding: 0px;
+    gap: 10px;
+    width: 70%;
+    height: 15%;
+    margin: 20px auto;
+    margin-bottom: 0px;
+    margin-left: 7%;
+}
+
+.highlight h3:hover {
+    color: #a30902;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.highlight + .highlight {
+    border-top: 1px solid #b8b8b8;
+    padding-top: 15px;
+}
+
+.highlight img {
+    width: 45%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.highlight .text-content {
+    flex: 1;
+    width: 100%;
+}
+
+
+.highlight h3 {
+    margin-top: 2%;
+    color: #7d0000;
+    font-size: 1.5em;
+}
+/* Destaque de notícias secundárias (4, 5 e 6)-Fim */
+
+
+/* Blocos de anúncios-Inicio */
+.ads {
+    padding: 20px;
+    background-color: #f1f1f1;
+    width: 250px;
+}
+
+.ad {
+    position: relative;
+    background-color: #eee;
+    border: 1px solid #000000;
+    margin-bottom: 45%;
+    margin-top: 40%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.ad img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ad-large {
+    height: 500px;
+}
+
+.ad-medium {
+    height: 300px;
+}
+
+.ad-small {
+    height: 240px;
+}
+/* Blocos de anúncios-Fim */
+
+
+/* Rodapé-Inicio */
+footer {
+    background-color: #7d0000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/* Rodapé-Fim */
+
+
+/* Formulário-Inicio */
+.form_public {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    width: 60%;
+    margin: auto;
+}
+
+.form_public input[type="text"],
+.form_public input[type="email"],
+.form_public textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form_public input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.form_public p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.form_public button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form_public button:hover {
+    background-color: #45a049;
+}
+
+.terms-container {
+    display: flex;
+    align-items: center;
+}
+
+.terms-container input[type="checkbox"] {
+    margin-right: 5px;
+}
+/* Formulário-Fim */
+
+
+/* Estilos responsivos-Inicio */
+
+@media (max-width: 1410px){
+    p{
+        display: none;
+    }
+    .sumiu{
+        display: none;
+    }
+
+    footer{
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 1035px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    aside {
+        display: none; 
+    }
+
+    .content {
+        flex: 1 1 100%; 
+        padding: 10px; 
+    }
+
+    .highlight {
+        width: 90%;
+    }
+    
+    p{
+        display: none;
+    }
+
+    footer{
+        margin-top: 10px;
+    }
+}
+
+/* Regras para telas menores que 480px */
+@media (max-width: 960px) {
+    header h1 {
+        text-align: left;
+    }
+
+    .content {
+        font-size: 0.9rem; 
+        text-align: left;
+    }
+
+    aside {
+        display: none; 
+    }
+
+    .content {
+        flex: 1 1 100%; 
+    }
+
+    .highlight {
+        width: 90%;
+    }
+
+    footer{
+        margin-top: 10px;
+    }
+
+}
+
+@media (max-width: 900px) {
+    footer{
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 770px) {
+    header h1 {
+        font-size: 1.25em; 
+    }
+
+    .content {
+        font-size: 0.9rem; 
+    }
+
+    aside {
+        display: none; 
+    }
+
+    .content {
+        flex: 1 1 100%; 
+    }
+
+    .highlight {
+        width: 90%;
+    }
+
+    footer{
+        margin-top: 2040x;
+    }
+
+}
+
+@media (max-width: 690px) {
+    footer{
+        margin-top: 70px;
+    }
+}
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.25em; 
+    }
+
+    .content {
+        font-size: 0.9rem; 
+    }
+
+    aside {
+        display: none; 
+    }
+
+    .content {
+        flex: 1 1 100%; 
+    }
+
+    .highlight {
+        width: 90%;
+    }
+    
+    .highlight .text-content a{
+        font-size: 1em;
+    }
+
+    footer {
+        margin-top: 20px;
+    }
+
+}
+
+.nao_apagar{
+    display: block;
+}
+
+/* Estilos responsivos-Fim */
+
